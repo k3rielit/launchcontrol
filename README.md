@@ -18,6 +18,26 @@ Currently it's usable through the CLI test program, but once the backend is done
 - [ ] GTAV: garage tracker
 - [ ] GTAV: Snapmatic exporter
 
+## How To Use
+
+- Build and run (see below)
+- On the first run it'll create a config file in the data directory next to the built executable (`src\LCV_CLI\bin\Debug\net6.0\data\config.json`)
+- Close the program, open the config file, and manually set `GTA.Path` and `ModestMenu.Path` with an escaped path string:
+```js
+{
+  "GTA": {
+    ...
+    "Path": "C:\\Program Files\\Epic Games\\GTAV",
+    ...
+  },
+  "ModestMenu": {
+    ...
+    "Path": "D:\\Programs\\modest-menu_v0.9.7\\",
+    ...
+},
+```
+- Now that the paths are set, the program will work properly, even after building or running it again
+
 ## How To Build
 
 - Download [.NET6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
